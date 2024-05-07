@@ -1,0 +1,38 @@
+Class Vehicle
+    std::string m_vehicle_id
+    std::string m_model_name
+    m_vehicle_sensor_unit referance_wrapper to a stck instance of VehicleSensorUnit.
+
+class VehicleSensorUnit
+    m_sensor_unit_type : INTEGRATED, PLUG_IN
+    std::array<float,5> m_sensor_last_5_readings 
+    float m_sensor_threshold_value //max value that sensor can hold
+
+Functionalities:
+
+    createObject() : 4 objects : std::list<std::shared_ptr<Vehicle>>
+    /*
+        create objects in heap.
+    */
+
+    return m_sensor_unit_type: unordered_set of unique m_sensor =_unit from all objects
+    /*
+        finds and returns the set of unique units from all objects*/
+
+    return m_sensor_unit: LastNSensorr last N instance -> from data 
+
+    return max value from m_sensor_last_5_readings for Vehicle object whose id is passed.
+
+    return count of instances which satisfy a predicate  passed (from main).
+
+In main:
+
+    - partial function using bind for functionalities.
+
+    - function to map all 5 functionalities in functionalities.cpp and partial function above to std::async trds
+
+    - wait function
+
+    USE STL
+    USE Futureerror
+    ASYNC
